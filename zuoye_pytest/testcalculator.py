@@ -1,6 +1,8 @@
 import pytest
 import yaml
+
 from pythoncode.calculator import Calculator
+
 
 def get_datas():
     with open('./data.yml') as f:
