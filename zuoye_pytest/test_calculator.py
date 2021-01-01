@@ -1,8 +1,10 @@
 import pytest
 import yaml
-
+import os, sys
+path = sys.path[0]
+for i in range(1): path = os.path.dirname(path)
+sys.path.append(path)
 from pythoncode.calculator import Calculator
-
 
 def get_datas():
     with open('./data.yml') as f:
@@ -44,4 +46,3 @@ class TestCalc:
     def test_div(self,a,b,expect):
         result = self.calc.div(a,b)
         assert result == expect
-        print(result)
