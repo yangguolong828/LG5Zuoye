@@ -39,7 +39,7 @@ def get_calc():
     return calc
 
 
-@pytest.fixture(params=add_datas)
+@pytest.fixture(params=add_datas, ids=add_ids)
 def get_add_datas(request):
     print("开始计算")
     data = request.param
@@ -47,7 +47,7 @@ def get_add_datas(request):
     yield data
     print("结束计算")
 
-@pytest.fixture(params=sub_datas)
+@pytest.fixture(params=sub_datas, ids=sub_ids)
 def get_sub_datas(request):
     print("开始计算")
     data = request.param
@@ -64,7 +64,7 @@ def get_mul_datas(request):
     print("结束计算")
 
 
-@pytest.fixture(params=div_datas)
+@pytest.fixture(params=div_datas, ids=div_ids)
 def get_div_datas(request):
     print("开始计算")
     data = request.param

@@ -3,15 +3,32 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
+      "name" : "AssertionError: assert 0.02 == 0.2",
+      "children" : [ {
+        "name" : "test_mul[浮点数相乘]",
+        "uid" : "ccb885780f6bea40",
+        "parentUid" : "f329ce0bd456eddd529401d7cbe761d9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609518820512,
+          "stop" : 1609518820512,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[0.1, 0.2, 0.2]" ]
+      } ],
+      "uid" : "f329ce0bd456eddd529401d7cbe761d9"
+    }, {
       "name" : "AssertionError: assert 0.5 == 2",
       "children" : [ {
-        "name" : "test_div[get_div_datas1]",
-        "uid" : "ea44c9741321ec2d",
+        "name" : "test_div[负数相除]",
+        "uid" : "a6b356b46c562a7e",
         "parentUid" : "490f3064cd64d41452184c341d2662f5",
         "status" : "failed",
         "time" : {
-          "start" : 1609517343009,
-          "stop" : 1609517343010,
+          "start" : 1609518820558,
+          "stop" : 1609518820559,
           "duration" : 1
         },
         "flaky" : false,
@@ -22,13 +39,13 @@
     }, {
       "name" : "AssertionError: assert 1.5 == 0.1",
       "children" : [ {
-        "name" : "test_div[get_div_datas3]",
-        "uid" : "798f48cea0b45edf",
+        "name" : "test_div[浮点数相除]",
+        "uid" : "abc2fc43107d0214",
         "parentUid" : "1a68dab6a1f48864b1842d2636f1b34a",
         "status" : "failed",
         "time" : {
-          "start" : 1609517343048,
-          "stop" : 1609517343048,
+          "start" : 1609518820572,
+          "stop" : 1609518820572,
           "duration" : 0
         },
         "flaky" : false,
@@ -36,23 +53,6 @@
         "parameters" : [ "[0.3, 0.2, 0.1]" ]
       } ],
       "uid" : "1a68dab6a1f48864b1842d2636f1b34a"
-    }, {
-      "name" : "AssertionError: assert 0.02 == 0.2",
-      "children" : [ {
-        "name" : "test_mul[浮点数相乘]",
-        "uid" : "60247239ac05f0e1",
-        "parentUid" : "f329ce0bd456eddd529401d7cbe761d9",
-        "status" : "failed",
-        "time" : {
-          "start" : 1609517343086,
-          "stop" : 1609517343086,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "[0.1, 0.2, 0.2]" ]
-      } ],
-      "uid" : "f329ce0bd456eddd529401d7cbe761d9"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],

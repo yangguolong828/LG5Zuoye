@@ -32,7 +32,7 @@ class TestCalc:
         #判断result结果是否等于期望的值
         assert result == get_div_datas[2]
 
-    @pytest.mark.flaky(reruns=1, reruns_delay=1)
+    @pytest.mark.flaky(reruns=2, reruns_delay=1)
     @pytest.mark.run(order=2)
     # 测试sub函数
     def test_sub(self, get_calc, get_sub_datas):
