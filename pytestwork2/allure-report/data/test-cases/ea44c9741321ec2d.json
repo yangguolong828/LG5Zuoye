@@ -1,0 +1,131 @@
+{
+  "uid" : "ea44c9741321ec2d",
+  "name" : "test_div[get_div_datas1]",
+  "fullName" : "pytestwork2.test_calc_new.TestCalc#test_div",
+  "historyId" : "5ff4920cd9bc0ae98a9a5ee1d8fd8600",
+  "time" : {
+    "start" : 1609517343009,
+    "stop" : 1609517343010,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 0.5 == 2",
+  "statusTrace" : "self = <test_calc_new.TestCalc object at 0x7f25447d6d60>, get_calc = <pythoncode.calculator.Calculator object at 0x7f25447b1310>\nget_div_datas = [-1, -2, 2]\n\n    @pytest.mark.run(order=4)\n    # 测试div函数\n    def test_div(self, get_calc, get_div_datas):\n        try:\n            # 调用div函数，返回的结果保存在result里面\n            result = get_calc.div(get_div_datas[0], get_div_datas[1])\n            if isinstance(result, float):\n                result = round(result,2)\n        except Exception as e:\n            print(e)\n        #判断result结果是否等于期望的值\n>       assert result == get_div_datas[2]\nE       assert 0.5 == 2\n\ntest_calc_new.py:33: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_div_datas",
+    "time" : {
+      "start" : 1609517343006,
+      "stop" : 1609517343007,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "get_calc",
+    "time" : {
+      "start" : 1609517342989,
+      "stop" : 1609517342989,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 0.5 == 2",
+    "statusTrace" : "self = <test_calc_new.TestCalc object at 0x7f25447d6d60>, get_calc = <pythoncode.calculator.Calculator object at 0x7f25447b1310>\nget_div_datas = [-1, -2, 2]\n\n    @pytest.mark.run(order=4)\n    # 测试div函数\n    def test_div(self, get_calc, get_div_datas):\n        try:\n            # 调用div函数，返回的结果保存在result里面\n            result = get_calc.div(get_div_datas[0], get_div_datas[1])\n            if isinstance(result, float):\n                result = round(result,2)\n        except Exception as e:\n            print(e)\n        #判断result结果是否等于期望的值\n>       assert result == get_div_datas[2]\nE       assert 0.5 == 2\n\ntest_calc_new.py:33: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "38612c3e7cc68365",
+      "name" : "stdout",
+      "source" : "38612c3e7cc68365.txt",
+      "type" : "text/plain",
+      "size" : 72
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "get_div_datas::0",
+    "time" : {
+      "start" : 1609517343038,
+      "stop" : 1609517343039,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "run(order=4)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytestwork2"
+  }, {
+    "name" : "suite",
+    "value" : "test_calc_new"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalc"
+  }, {
+    "name" : "host",
+    "value" : "ygl-virtual-machine"
+  }, {
+    "name" : "thread",
+    "value" : "16108-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytestwork2.test_calc_new"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "get_div_datas",
+    "value" : "[-1, -2, 2]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "run(order=4)" ]
+  },
+  "source" : "ea44c9741321ec2d.json",
+  "parameterValues" : [ "[-1, -2, 2]" ]
+}
