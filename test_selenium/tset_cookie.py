@@ -1,7 +1,8 @@
 import json
 
 from selenium import webdriver
-
+# import collections.abc
+# print(isinstance('hello',collections.abc.Iterable)) #判断是否可以迭代
 
 class Testcookies():
 
