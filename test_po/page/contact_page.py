@@ -6,17 +6,43 @@ from test_po.page.base_page import BasePage
 
 class ContactPage(BasePage):
 
+    def setup_class(self):
+        pass
+
+    def teardown_method(self):
+        self.driver.quit()
+
     def goto_add_member(self):
         pass
 
     def goto_add_department(self):
-        #查找元素进入添加组织弹窗
-        self.driver.find_element(By.CSS_SELECTOR, ".js_create_dropdown").click()
-        #返回AddDepartmentPage
-        return AddDepartmentPage(self.driver)
+        pass
 
     def get_memberlist(self):
         pass
 
     def get_departmentlist(self):
-        pass
+        """
+        返回通讯录页面的组织架构信息
+        :retrun:
+        """
+        department_webele_list = self.driver.find_elements(By.XPATH, '//*[@id="1688851053681111"]/ul')
+        department_list = []
+        for webelement in department_webele_list:
+            department_list.append(webelement.text)
+
+        # 返回department_list数据
+        return department_list
+
+    def get_sdepartmentlist(self):
+        """
+        返回通讯录页面的子组织架构信息
+        :retrun:
+        """
+        sdepartment_webele_list = self.driver.find_elements(By.XPATH, '//*[@id="1688850854889588"]/ul')
+        sdepartment_list = []
+        for webelement in sdepartment_webele_list:
+            sdepartment_list.append(webelement.text)
+
+        # 返回department_list数据
+        return sdepartment_list
