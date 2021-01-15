@@ -1,6 +1,4 @@
 from selenium.webdriver.common.by import By
-
-from test_po.page.add_department_page import AddDepartmentPage
 from test_po.page.base_page import BasePage
 
 
@@ -10,7 +8,7 @@ class ContactPage(BasePage):
         pass
 
     def teardown_method(self):
-        self.driver.quit()
+        pass
 
     def goto_add_member(self):
         pass

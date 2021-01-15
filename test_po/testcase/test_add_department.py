@@ -13,10 +13,10 @@ class TestAddDepartment():
     #         self.main.quit()
 
     def test_add_department(self):
-        result = self.main.goto_department().add_department().get_departmentlist()
-        assert "质量保障" in result
+        result_deparments = self.main.goto_department().add_department().get_departmentlist()
+        assert "质量保障" in result_deparments
 
     def test_add_sdepartment(self):
-        result = self.main.goto_department().add_sdepartment().get_sdepartmentlist()
-        assert "测试11" in result
+        result_sdepartments = self.main.goto_department().add_sdepartment().get_sdepartmentlist()
+        assert "测试11" in result_sdepartments
 
