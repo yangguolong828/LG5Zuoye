@@ -12,10 +12,10 @@ class MainPage(BasePage):
 
     def goto_department(self):
         # 进入通讯录页面
-        self.driver.find_element(By.ID, "menu_contacts").click()
+        self.find(By.ID, "menu_contacts").click()
         # 定位+按钮
-        self.driver.find_element(By.CSS_SELECTOR, ".js_create_dropdown").click()
+        self.find(By.CSS_SELECTOR, ".js_create_dropdown").click()
         # 定位部门，进入添加部门弹窗
-        self.driver.find_element(By.XPATH, "//*[@class='js_create_party']").click()
+        self.find(By.XPATH, "//*[@class='js_create_party']").click()
         return AddDepartmentPage(self.driver)
 

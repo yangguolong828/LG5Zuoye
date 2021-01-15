@@ -24,7 +24,7 @@ class ContactPage(BasePage):
         返回通讯录页面的组织架构信息
         :retrun:
         """
-        department_webele_list = self.driver.find_elements(By.XPATH, '//*[@id="1688851053681111"]/ul')
+        department_webele_list = self.driver.find_elements(By.XPATH, '//ul[@role="group" and [@class="jstree-children"]//li')
         department_list = []
         for webelement in department_webele_list:
             department_list.append(webelement.text)
@@ -37,7 +37,7 @@ class ContactPage(BasePage):
         返回通讯录页面的子组织架构信息
         :retrun:
         """
-        sdepartment_webele_list = self.driver.find_elements(By.XPATH, '//*[@id="1688850854889588"]/ul')
+        sdepartment_webele_list = self.driver.find_elements(By.XPATH, '//ul[@role="group" and [@class="jstree-children"]//li')
         sdepartment_list = []
         for webelement in sdepartment_webele_list:
             sdepartment_list.append(webelement.text)

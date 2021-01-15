@@ -9,14 +9,14 @@ from selenium.webdriver.remote.webdriver import WebDriver
 class BasePage():
 
     def __init__(self, base_driver=None):
-        base_driver:WebDriver
+        base_driver: WebDriver
         if base_driver is None:
             self.driver = webdriver.Chrome()
             self.driver.maximize_window()
             self._cookie_login()
-            self.driver.implicitly_wait(3)
         else:
             self.driver = base_driver
+        self.driver.implicitly_wait(3)
 
 
     def _cookie_login(self):
@@ -30,4 +30,7 @@ class BasePage():
             self.driver.add_cookie(cookie)
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
         sleep(3)
-        self.driver.find_element(By.XPATH, '//*[@id="menu_contacts"]').click()
+        self.find(By.XPATH, '//*[@id="menu_contacts"]').click()
+
+    def find(self, by, value):
+        return self.find(by=by, value=value)
