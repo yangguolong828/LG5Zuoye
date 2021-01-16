@@ -12,7 +12,6 @@ class BasePage():
         base_driver: WebDriver
         if base_driver is None:
             self.driver = webdriver.Chrome()
-            self.driver.maximize_window()
             self._cookie_login()
         else:
             self.driver = base_driver
@@ -30,7 +29,7 @@ class BasePage():
             self.driver.add_cookie(cookie)
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
         sleep(3)
-        self.find(By.XPATH, '//*[@id="menu_contacts"]').click()
+        # self.find(By.XPATH, '//*[@id="menu_contacts"]').click()
 
     def find(self, by, value):
-        return self.find(by=by, value=value)
+        return self.driver.find_element(by=by, value=value)
