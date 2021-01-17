@@ -28,7 +28,7 @@ class TestDemo:
         return self.driver.find_element(by=by, value=value)
 
     def test_add_member(self):
-        name = '张三'
+        name = '张山'
         gender = '男'
         phonenumber = '13212324123'
         mail = "14231423@126.com"
