@@ -1,6 +1,6 @@
 from appium import webdriver
-from test_appium.test_frame_searchpage.base_page import BasePage
-from test_appium.test_frame_searchpage.page.main_page import MainPage
+from test_appium.test_frame_ymal.base_page import BasePage
+from test_appium.test_frame_ymal.page.main_page import MainPage
 
 # 启动app、关闭app、重启app、进入首页。。。
 class App(BasePage):
