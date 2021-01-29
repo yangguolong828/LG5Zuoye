@@ -24,10 +24,11 @@ class BasePage:
     def send(self, locator, content):
         self.find(locator).send_keys(content)
 
-    def run_step(self, page_path):
+    def run_step(self, page_path, operation):
         with open(page_path, "r", encoding="utf-8") as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
-        for step in data:
+            steps = data[operation]
+        for step in steps:
             action = step['action']
             if action == "find_and_click":
                 self.find_and_click(step['locator'])

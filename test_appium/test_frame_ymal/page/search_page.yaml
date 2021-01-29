@@ -1,7 +1,8 @@
-- action: send
-  locator: [xpath, "//*[@resource-id='com.xueqiu.android:id/search_input_text']"]
-  content: alibaba
+search:
+  - action: send
+    locator: [xpath, "//*[@resource-id='com.xueqiu.android:id/search_input_text']"]
+    content: alibaba
 
-- action: find_and_click
-  locator: [xpath, '//*[@text="BABA"]']
+  - action: find_and_click
+    locator: [xpath, '//*[@text="BABA"]']
 
